@@ -32,9 +32,8 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-     
+          - name: Clean destination directory
+            run: Remove-Item -Force C:\Test\vino\*.jar
 
-      - name: Move JAR file to runner directory
-        run: mv target\*.jar C:\Test\vino\
-
-
+            - name: Move JAR file to runner directory
+              run: mv target\*.jar C:\Test\vino\
