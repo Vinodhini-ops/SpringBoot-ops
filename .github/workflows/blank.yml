@@ -35,6 +35,6 @@ jobs:
      
 
       - name: Move JAR file to runner directory
-        run: Move-Item target\*.jar C:\Test\vino\
+        run: mv target\*.jar C:\Test\vino\
 
 
