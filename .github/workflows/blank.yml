@@ -21,7 +21,7 @@ jobs:
     runs-on: self-hosted
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
+        steps:
       - uses: actions/checkout@v4
 
       - name: Run a one-line script
@@ -32,8 +32,9 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-          - name: Clean destination directory
-            run: Remove-Item -Force C:\Test\vino\*.jar
+      - name: Clean destination directory
+        run: Remove-Item -Force C:\Test\vino\*.jar
 
-            - name: Move JAR file to runner directory
-              run: mv target\*.jar C:\Test\vino\
+      - name: Move JAR file to runner directory
+        run: Move-Item -Force target\*.jar C:\Test\vino\
+
