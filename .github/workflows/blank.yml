@@ -32,8 +32,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-      - name: Create destination directory
-        run: mkdir C:/Test/vino
+     
 
       - name: Move JAR file to runner directory
         run: Move-Item target\*.jar C:\Test\vino\
